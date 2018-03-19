@@ -11,8 +11,10 @@ export const VisibilityFilters = {
 };
 
 // action creators
+let todoId = 0;
+
 export function addTodo(text) {
-  return { type: ADD_TODO, text };
+  return { id: todoId++, type: ADD_TODO, text };
 }
 export function toggleTodo(index) {
   return { type: TOGGLE_TODO, index };
